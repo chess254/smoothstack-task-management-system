@@ -3,7 +3,6 @@ This is a full-stack Task Management System with a Spring Boot backend and a Rea
 
 ## Prerequisites
 
-- Ubuntu (tested on 20.04+)
 - Java 17+ (OpenJDK)
 - Maven (3.6+)
 - Node.js 18+ and npm (8+)
@@ -25,7 +24,7 @@ This is a full-stack Task Management System with a Spring Boot backend and a Rea
 
 
 
-# Setup and Running
+# Setup and Running (*nix)
 
 ## Update package list
 sudo apt update
