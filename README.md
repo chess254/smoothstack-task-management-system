@@ -14,7 +14,7 @@ This is a full-stack Task Management System built with Spring Boot (backend) and
 2. Run `mvn clean install`
 3. Run `mvn spring-boot:run`
    - The backend runs on `http://localhost:8080`
-   - H2 database console: `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:testdb`, username: `sa`, password: empty)
+   - H2 database console: `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:testdb`, username: `sa`, password: check in console)
 
 ### Frontend
 1. Navigate to `frontend/`
