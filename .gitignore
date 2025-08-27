@@ -1,0 +1,17 @@
+# Backend
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/.idea/
+*.class
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.idea/
+
+# General
+.DS_Store
+*.log
