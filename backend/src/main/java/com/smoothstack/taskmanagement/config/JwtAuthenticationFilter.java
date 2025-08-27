@@ -1,4 +1,4 @@
-package com.smoothstack.taskmanagement.security;
+package com.smoothstack.taskmanagement.config;
 
 import com.smoothstack.taskmanagement.security.JwtTokenProvider;
 import com.smoothstack.taskmanagement.security.UserDetailsServiceImpl;
