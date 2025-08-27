@@ -19,7 +19,8 @@ This is a full-stack Task Management System built with Spring Boot (backend) and
 ### Frontend
 1. Navigate to `frontend/`
 2. Run `npm install`
-3. Run `npm start`
+3. Run `npx tailwindcss init` if tailwind.config.js is missing from the cloned repository.
+4. Run `npm start`
    - The frontend runs on `http://localhost:3000`
 
 ## Features
