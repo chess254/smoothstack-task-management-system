@@ -1,3 +1,5 @@
+package com.smoothstack.taskmanagement.security;
+
 import com.smoothstack.taskmanagement.security.JwtTokenProvider;
 import com.smoothstack.taskmanagement.security.UserDetailsServiceImpl;
 import jakarta.servlet.FilterChain;
@@ -13,6 +15,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+@Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtTokenProvider tokenProvider;

@@ -1,6 +1,7 @@
 package com.smoothstack.taskmanagement.config;
 
 import com.smoothstack.taskmanagement.security.JwtTokenProvider;
+import com.smoothstack.taskmanagement.config.JwtAuthenticationFilter;
 import com.smoothstack.taskmanagement.security.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
