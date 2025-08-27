@@ -21,45 +21,40 @@ This is a full-stack Task Management System with a Spring Boot backend and a Rea
 - Uses H2 in-memory DB.
 - Frontend uses Context API for state management, Axios for API calls, React Router for routing.
 - Styling with Tailwind CSS (configured in package.json).
+- The backend seeds two users: admin@example.com:admin123 (ADMIN), user@example.com:user123 (USER).
 
 
 
 # Setup and Running (*nix)
 
 ## Update package list
-sudo apt update
+- `sudo apt update`
 
 ## Install Java 17
-sudo apt install openjdk-17-jdk
-java -version
+- `sudo apt install openjdk-17-jdk`
+- `java -version`
 
 ## Install Maven
-sudo apt install maven
-mvn -version
+- `sudo apt install maven`
+- `mvn -version`
 
 ## Install Node.js 18 and npm
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
-node -v
-npm -v
+- `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
+- `sudo apt install -y nodejs`
+- `node -v`
+- `npm -v`
 
 ## Install Git
-sudo apt install git
-git --version
+- `sudo apt install git`
+- `git --version`
 
 ## Configure Git
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-
-## Optional: Set up SSH for GitHub
-ssh-keygen -t ed25519 -C "your.email@example.com"
-cat ~/.ssh/id_ed25519.pub
-## Copy the key to GitHub: Settings > SSH and GPG keys > New SSH key
-ssh -T git@github.com
+- `git config --global user.name "Your Name"`
+- `git config --global user.email "your.email@example.com"`
 
 ## Cloning the Project
 
-`git clone https://github.com/chess254/smoothstack-task-management-system.git`
+- `git clone https://github.com/chess254/smoothstack-task-management-system.git`
 
 ### Backend
 1. Navigate to `backend/`
@@ -79,55 +74,37 @@ Opens http://localhost:3000 in your browser.
 The frontend proxies API calls to http://localhost:8080 (configured in package.json).
 
 
-Test the app:
+## Test the app:
 
-Go to http://localhost:3000/login.
-Login with admin@example.com:admin123 or user@example.com:user123.
-Verify the dashboard shows tasks in TODO, IN_PROGRESS, DONE columns.
-Test task creation, editing, deletion, and filtering.
+- Go to http://localhost:3000/login.
+- Login with admin@example.com:admin123 or user@example.com:user123.
+- Verify the dashboard shows tasks in TODO, IN_PROGRESS, DONE columns.
+- Test task creation, editing, deletion, and filtering.
 
-Testing the Application
-Backend Tests
+### Testing the Application
 
-Two unit tests are provided (TaskServiceTest, UserServiceTest) in backend/src/test/java/com/example/taskmanagement/service/.
-Run tests:cd ~/smoothstack-task-management-system/backend
-mvn test
+Two unit tests are provided (TaskServiceTest, UserServiceTest) in backend/src/test/java/com/example/taskmanagement/service/
+- Run tests: `cd ~/smoothstack-task-management-system/backend`
+- `mvn test`
 
+## Troubleshooting
 
-Expected: Both tests pass, verifying task status transitions and user registration.
+### CORS Issues:
 
-Frontend Tests
-
-No frontend tests are included (bonus feature not implemented).
-To add tests, use react-scripts test:cd ~/smoothstack-task-management-system/frontend
-npm test
+- Ensure WebConfig.java allows http://localhost:3000.
+- Verify package.json has "proxy": "http://localhost:8080".
 
 
-Create test files (e.g., src/components/AuthForm.test.js) using Jest and React Testing Library.
+### Dependency Issues:
+
+Backend: `rm -rf ~/.m2/repository`
+- `mvn clean install`
+
+
+Frontend: `rm -rf node_modules package-lock.json`
+- `npm install`
 
 
 
-
-Troubleshooting
-
-CORS Issues:
-
-Ensure WebConfig.java allows http://localhost:3000.
-Verify package.json has "proxy": "http://localhost:8080".
-
-
-Dependency Issues:
-
-Backend:rm -rf ~/.m2/repository
-mvn clean install
-
-
-Frontend:rm -rf node_modules package-lock.json
-npm install
-
-Notes
-
-The backend seeds two users: admin@example.com:admin123 (ADMIN), user@example.com:user123 (USER).
-The frontend uses React Context API for state management and Tailwind CSS for styling.
 
 
