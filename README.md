@@ -1,7 +1,13 @@
+## Task Management System
+This is a full-stack Task Management System with a Spring Boot backend and a React frontend. It supports user authentication, task CRUD operations, task filtering, and role-based access (ADMIN, USER). The backend uses an H2 in-memory database, and the frontend uses Tailwind CSS for styling.
 
-## Setup and Running
+## Prerequisites
 
-
+- Ubuntu (tested on 20.04+)
+- Java 17+ (OpenJDK)
+- Maven (3.6+)
+- Node.js 18+ and npm (8+)
+- Git
 
 ## Features
 - User registration and login with JWT
@@ -19,50 +25,43 @@
 
 
 
-## Task Management System
-This is a full-stack Task Management System with a Spring Boot backend and a React frontend. It supports user authentication, task CRUD operations, task filtering, and role-based access (ADMIN, USER). The backend uses an H2 in-memory database, and the frontend uses Tailwind CSS for styling.
+# Setup and Running
 
-## Prerequisites
-
-- Ubuntu (tested on 20.04+)
-- Java 17+ (OpenJDK)
-- Maven (3.6+)
-- Node.js 18+ and npm (8+)
-- Git
-
-Install Prerequisites on Ubuntu
-# Update package list
+## Update package list
 sudo apt update
 
-# Install Java 17
+## Install Java 17
 sudo apt install openjdk-17-jdk
 java -version
 
-# Install Maven
+## Install Maven
 sudo apt install maven
 mvn -version
 
-# Install Node.js 18 and npm
+## Install Node.js 18 and npm
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
 node -v
 npm -v
 
-# Install Git
+## Install Git
 sudo apt install git
 git --version
 
-# Configure Git
+## Configure Git
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 
-# Optional: Set up SSH for GitHub
+## Optional: Set up SSH for GitHub
 ssh-keygen -t ed25519 -C "your.email@example.com"
 cat ~/.ssh/id_ed25519.pub
-# Copy the key to GitHub: Settings > SSH and GPG keys > New SSH key
+## Copy the key to GitHub: Settings > SSH and GPG keys > New SSH key
 ssh -T git@github.com
 
-# Cloning the Project
+## Cloning the Project
+
+`git clone https://github.com/chess254/smoothstack-task-management-system.git`
+
 ### Backend
 1. Navigate to `backend/`
 2. Run `mvn clean install`
@@ -92,7 +91,7 @@ Testing the Application
 Backend Tests
 
 Two unit tests are provided (TaskServiceTest, UserServiceTest) in backend/src/test/java/com/example/taskmanagement/service/.
-Run tests:cd ~/task-management-system/backend
+Run tests:cd ~/smoothstack-task-management-system/backend
 mvn test
 
 
@@ -101,7 +100,7 @@ Expected: Both tests pass, verifying task status transitions and user registrati
 Frontend Tests
 
 No frontend tests are included (bonus feature not implemented).
-To add tests, use react-scripts test:cd ~/task-management-system/frontend
+To add tests, use react-scripts test:cd ~/smoothstack-task-management-system/frontend
 npm test
 
 
