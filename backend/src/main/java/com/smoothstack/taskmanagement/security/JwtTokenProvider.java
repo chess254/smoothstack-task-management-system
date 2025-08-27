@@ -25,13 +25,13 @@ public class JwtTokenProvider {
     }
 
     public Long getUserIdFromJWT(String token) {
-        Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
+        Claims claims = Jwts.parser().setSigningKey(key).build().parseClaimsJws(token).getBody();
         return Long.parseLong(claims.getSubject());
     }
 
     public boolean validateToken(String authToken) {
         try {
-            Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(authToken);
+            Jwts.parser().setSigningKey(key).build().parseClaimsJws(authToken);
             return true;
         } catch (Exception e) {
             return false;
